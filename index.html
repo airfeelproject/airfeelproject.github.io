@@ -17,7 +17,7 @@
             <span id="uv-index" class="value-item">none</span>
         </div>
         <div class="item">
-            <div class="item-title bt-blue">Bar.pressure </div>
+            <div class="item-title bt-blue">Bar. Pressure </div>
             <span id="bar-pressure" class="value-item">none</span>
         </div>
         <div class="item">
@@ -84,6 +84,7 @@
                     let Temperature = document.getElementById("temperature")
                     let Humidity = document.getElementById("humidity")
                     let wind_Direction = document.getElementById("wind-direction")
+                    let wind_Speed = document.getElementById("wind-speed")
                     let Methane = document.getElementById("methane")
                     let Ammonia = document.getElementById("ammonia")
                     let co = document.getElementById("co")
@@ -91,20 +92,21 @@
                     let Co2 = document.getElementById("co2")
                     let Hydrogen = document.getElementById("hydrogen")
                     // console.log(data);
-                    UV_index.innerHTML = data[9];
+                    UV_index.innerHTML = data[4];
                     bar_pressure.innerHTML = data[13];
                     Rainfall.innerHTML = data[10];
                     Temperature.innerHTML = data[11];
                     Humidity.innerHTML = data[12];
                     wind_Direction.innerHTML = data[8];
+                    wind_Speed.innerHTML = data[9];
                     Methane.innerHTML = data[7];
-                    Ammonia.innerHTML = data[6];
+                    Ammonia.innerHTML = data[1];
                     co.innerHTML = data[5];
-                    Ozone.innerHTML = data[4];
-                    Co2.innerHTML = data[3];
-                    Hydrogen.innerHTML = data[2];
+                    Ozone.innerHTML = data[2];
+                    Co2.innerHTML = data[6];
+                    Hydrogen.innerHTML = data[3];
                 })
-        }, 3000
+        }, 1000
     )
 
 
