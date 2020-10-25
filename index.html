@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    </style>
+</head>
+<div class="bungkus">
+    <div class="container">
+        <div class="header">
+            <img src="img/cuaca.PNG" alt="">
+            <span>Weather Parameters</span>
+        </div>
+        <div class="item">
+            <div class="item-title bt-blue">UV_index: </div>
+            <span id="uv-index" class="value-item">none</span>
+        </div>
+        <div class="item">
+            <div class="item-title bt-blue">Bar.pressure: </div>
+            <span id="bar-pressure" class="value-item">none</span>
+        </div>
+        <div class="item">
+            <div class="item-title">Rainfall:</div>
+            <span id="rainfall" class="value-item">none</span>
+        </div>
+        <div class="item">
+            <div class="item-title">Temperature: </div>
+            <span id="temperature" class="value-item">none</span>
+        </div>
+        <div class="item">
+            <div class="item-title">Humidity:</div>
+            <span id="humidity" class="value-item">none</span>
+        </div>
+        <div class="item">
+            <div class="item-title bt-blue">wind_Direction: </div>
+            <span id="wind-direction" class="value-item">none</span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="header">
+            <img src="img/air.PNG" alt="">
+            <span>Air Quality Parameters</span>
+        </div>
+        <div class="item">
+            <div class="item-title bt-blue">Methane: </div>
+            <span id="methane" class="value-item">none</span>
+        </div>
+        <div class="item">
+            <div class="item-title bt-blue">Ammonia: </div>
+            <span id="ammonia" class="value-item">none</span>
+        </div>
+        <div class="item">
+            <div class="item-title">co:</div>
+            <span id="co" class="value-item">none</span>
+        </div>
+        <div class="item">
+            <div class="item-title">Ozone: </div>
+            <span id="ozone" class="value-item">none</span>
+        </div>
+        <div class="item">
+            <div class="item-title">Co2:</div>
+            <span id="co2" class="value-item">none</span>
+        </div>
+        <div class="item">
+            <div class="item-title bt-blue">Hydrogen: </div>
+            <span id="hydrogen" class="value-item">none</span>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    setInterval(
+        function () {
+            fetch('https://coba-esp32-analog.firebaseio.com/rest/saving-data/fireblog/dataStr.json?print=pretty')
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    data = data.split(",");
+                    let UV_index= document.getElementById("uv-index");
+                    let bar_pressure = document.getElementById("bar-pressure")
+                    let Rainfall = document.getElementById("rainfall")
+                    let Temperature = document.getElementById("temperature")
+                    let Humidity = document.getElementById("humidity")
+                    let wind_Direction = document.getElementById("wind-direction")
+                    let Methane = document.getElementById("methane")
+                    let Ammonia = document.getElementById("ammonia")
+                    let co = document.getElementById("co")
+                    let Ozone = document.getElementById("ozone")
+                    let Co2 = document.getElementById("co2")
+                    let Hydrogen = document.getElementById("hydrogen")
+                    // console.log(data);
+                    UV_index.innerHTML = data[9];
+                    bar_pressure.innerHTML = data[13];
+                    Rainfall.innerHTML = data[10];
+                    Temperature.innerHTML = data[11];
+                    Humidity.innerHTML = data[12];
+                    wind_Direction.innerHTML = data[8];
+                    Methane.innerHTML = data[7];
+                    Ammonia.innerHTML = data[6];
+                    co.innerHTML = data[5];
+                    Ozone.innerHTML = data[4];
+                    Co2.innerHTML = data[3];
+                    Hydrogen.innerHTML = data[2];
+                })
+        }, 3000
+    )
+
+
+</script>
+
+</body>
+
+</html>

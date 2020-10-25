@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+}
+.bungkus{
+    position: absolute;
+    right: 0;
+}
+.container {
+    background-color: white;
+    width: 500px;
+    /* height: 550px; */
+    float: left;
+    margin: 20px;
+}
+
+.header{
+    padding: 10px 20px;
+    text-align: center;
+
+}
+
+.header img{
+    height: 80px;
+    /* background-color: chartreuse; */
+}
+
+.header span{ 
+    font-size: 2rem;
+    /*
+    padding-bottom: 50px;
+    display: inline-block;
+    background-color: brown; */
+}
+
+.item {
+    background-color: rgb(100, 100, 100);
+    width: 230px;
+    height: 150px;
+    float: left;
+    margin: 10px 10px 10px 10px;
+    padding: 10px 35px 30px 35px;
+    box-sizing: border-box;
+    color: aliceblue;
+
+}
+
+.item-title{
+    border-top: 5px solid blue ;
+    font-size: 1.5rem;
+    
+
+} 
+
+.value-item{
+    font-size: 2rem;
+}
+
+.bt-blue{
+    border-top: 5px solid springgreen ;
+}
+body {
+    background-color: gray;
+}
