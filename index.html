@@ -142,15 +142,28 @@
                     wind_Direction.innerHTML = data[8];
                     wind_Speed.innerHTML = data[9];
                     Methane.innerHTML = data[7];
-                    let _amonia =  (1000 * 4096 * 0.66 / parseFloat(data[1]));
+                    let _amonia =  (1000 * 4096 * 0.66 / parseFloat(data[1]))-1000;
                     _amonia = _amonia / 721;
                     _amonia = Math.pow(_amonia , -2.189) * 101.37;
-                    _amonia = Math.round(_amonia * 100) / 100
+                    _amonia = Math.round(_amonia * 100) / 10
                     Ammonia.innerHTML = _amonia;
-                    co.innerHTML = data[5];
-                    Ozone.innerHTML = data[2];
+                    let _co =  (1000 * 4096 * 1.51 / parseFloat(data[6]))-1000;
+                    _co = _co / 790;
+                    _co = Math.pow(_co , -2.056) * 603.59;
+                    _co = Math.round(_co * 100) / 10
+                    co.innerHTML = _co;
+                    let _ozone =  (1000 * 4096 * 1.151 / parseFloat(data[2]))-1000;
+                    _ozone = _ozone / 12.7;
+                    _ozone = Math.pow((_ozone , -2.445) *20.34)*1000;
+                    _ozone = Math.round(_ozone * 100) / 10
+                    Ozone.innerHTML = _ozone;
                     Co2.innerHTML = data[6];
-                    Hydrogen.innerHTML = data[3];
+                    let _hydrogen =  (1000 * 4096 * 1.151 / parseFloat(data[3]))-1000;
+                    _hydrogen = _hydrogen / 3.4;
+                    _hydrogen = Math.pow(_hydrogen , -0.681) * 995.95;
+                    _hydrogen = Math.round(_hydrogen * 100) / 10
+                    Hydrogen.innerHTML = _hydrogen;
+                    
 					
 					tgl.innerHTML = data[14];
 					wkt.innerHTML = data[15];
