@@ -141,40 +141,32 @@
                     wind_Speed.innerHTML = data[9];
 			
                     let _methane =  (1000 * 4096 * 0.66 / parseFloat(data[7])) - 1000;
-		    methane = _methane / 22364;
+		            methane = _methane / 22364;
                     _methane = Math.pow(_methane , -4.293) * 479.77;
                     _methane = Math.round(_methane * 100) / 100
-		    Methane.innerHTML = _methane;
+		            Methane.innerHTML = _methane;
                     
-		    let _amonia =  (1000 * 4096 * 0.66 / parseFloat(data[1])) - 1000;
+		            let _amonia =  (1000 * 4096 * 0.66 / parseFloat(data[1]))-1000;
                     _amonia = _amonia / 721;
                     _amonia = Math.pow(_amonia , -2.189) * 101.37;
                     _amonia = Math.round(_amonia * 100) / 10
                     Ammonia.innerHTML = _amonia;
-                    
-		    let _co =  (1000 * 4096 * 1.151 / parseFloat(data[6])) - 1000;
+                    let _co =  (1000 * 4096 * 1.51 / parseFloat(data[6]))-1000;
                     _co = _co / 790;
-                    _co = Math.pow(_co , 2.056) * 603.59;
-                    _co = Math.round(_co * 100) / 100
-		    co.innerHTML = _co;
-		
-                    let _ozone =  (1000 * 4096 * 1.151 / parseFloat(data[2])) - 1000;
+                    _co = Math.pow(_co , -2.056) * 603.59;
+                    _co = Math.round(_co * 100) / 10
+                    co.innerHTML = _co;
+                    let _ozone =  (1000 * 4096 * 1.151 / parseFloat(data[2]))-1000;
                     _ozone = _ozone / 12.7;
-                    _ozone = Math.pow((_ozone ,-2.445) * 20.34) * 1000;
-                    _ozone = Math.round(_ozone * 100) / 100
-		    Ozone.innerHTML = _ozone;
-			
-                    let _hydrogen =  (1000 * 4096 * 1.151 / parseFloat(data[3])) - 1000;
-                    _hydrogen = _hydrogen / 12.7;
-                    _hydrogen = Math.pow(_hydrogen ,-2.445) * 20.34) * 1000;
-                    _hydrogen = Math.round(_hydrogen * 100) / 100
+                    _ozone = Math.pow((_ozone , -2.445) *20.34)*1000;
+                    _ozone = Math.round(_ozone * 100) / 10
+                    Ozone.innerHTML = _ozone;
+                    Co2.innerHTML = data[6];
+                    let _hydrogen =  (1000 * 4096 * 1.151 / parseFloat(data[3]))-1000;
+                    _hydrogen = _hydrogen / 3.4;
+                    _hydrogen = Math.pow(_hydrogen , -0.681) * 995.95;
+                    _hydrogen = Math.round(_hydrogen * 100) / 10
                     Hydrogen.innerHTML = _hydrogen;
-		    
-		    let _co2 = 3.3(parseFloat(data[5])/4096;
-		    _co2 = ((8820.6 * (_co2 ^ 2)) - (36219 * _co2) + 44742) / 1000;
-		    _co2 = Math.round(_co2 * 100) / 100
-                    co2.innerHTML = _co2;
-			
 		    tgl.innerHTML = data[14];
 		    wkt.innerHTML = data[15];
                 })
