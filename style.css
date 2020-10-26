@@ -13,19 +13,35 @@
     margin: 20px;
 }
 
+.container1 {
+    width: 220px;
+    float: left;
+    margin: 20px;
+}
+
+.item-container{
+	font-size: 3rem 
+	font-family: 'verdana'
+	text-align: center;
+}
+
 .header{
     padding: 10px 20px;
-    text-align: center;
 
 }
 
 .header img{
     height: 80px;
+	width: 100px
+	font-family:'Verdana'
+	text-align: right;
     /* background-color: chartreuse; */
+    
 }
 
 .header span{ 
-    font-size: 2rem;
+    font-size: 1.8rem;
+	font-family:'Verdana'
     /*
     padding-bottom: 50px;
     display: inline-block;
@@ -41,18 +57,33 @@
     padding: 10px 35px 30px 35px;
     box-sizing: border-box;
     color: aliceblue;
-
+	font: helvetica;
 }
 
 .item-title{
-    border-top: 5px solid blue ;
+    border-top: 5px solid cyan ;
     font-size: 1.5rem;
-    
-
+	font-family:'Verdana'
 } 
 
 .value-item{
-    font-size: 2rem;
+    font-size: 4rem;
+	font-family:'Verdana'
+}
+
+.value-item2{
+    font-size: 2.8rem;
+	font-family:'Verdana'
+}
+
+.value-item3{
+    font-size: 1rem;
+	font-family:'Verdana'
+}
+
+.item-unit{
+	font-size: 1.2rem;
+	font-family:'Verdana'
 }
 
 .bt-blue{
