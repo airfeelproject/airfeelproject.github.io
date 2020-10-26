@@ -109,7 +109,8 @@
 
     setInterval(
         function () {
-            fetch('https://ws-stmm2020.firebaseio.com/rest/saving-data/fireblog/dataStr.json?print=pretty')
+            // fetch('https://ws-stmm2020.firebaseio.com/rest/saving-data/fireblog/dataStr.json?print=pretty')
+            fetch('https://coba-esp32-analog.firebaseio.com/rest/saving-data/fireblog/dataStr.json?print=pretty')
                 .then(response => response.json())
                 .then(data => {
                     console.log(data);
