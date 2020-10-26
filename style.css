@@ -83,7 +83,14 @@
 
 .item-unit{
 	font-size: 1.2rem;
-	font-family:'Verdana'
+	font-family:'Verdana';
+	color: cyan;
+}
+
+.item-unit1{
+	font-size: 1.2rem;
+	font-family:'Verdana';
+	color: springgreen;
 }
 
 .bt-blue{
